@@ -81,7 +81,7 @@ body{
 }
 
 .day{
-  height: 100%;
+  height: 0%;
   width: 50px;
   background-color: var(--orange);
   border-radius: var(--border-radius-chart);
@@ -92,11 +92,37 @@ body{
   transition: all 1s;
 }
 
+.day:before{
+  content: attr(amount);
+  color: var(--very-pale-orange);
+  background-color: var(--dark-brown);
+  height: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -35px;
+  border-radius: var(--border-radius-chart);
+  opacity: 0;
+  transition: 0.3s all;
+  font-size: 12px;
+}
+
 .day:after{
   content: attr(id);
   color: var(--medium-brown);
   position: absolute;
   bottom: -25px;
+}
+
+.day:hover{
+  cursor: pointer;
+  filter: brightness(1.2)
+}
+
+.day:hover:before{
+  opacity: 1;
 }
 
 .seperator {

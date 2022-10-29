@@ -7,11 +7,13 @@ data.forEach( x => {
   }
 })
 
-data.forEach( x => {
-  document.getElementById(x.day).style.height = (x.amount / max) * 100 + "%"
-  document.getElementById(x.day).setAttribute('amount', '$'+x.amount)
-
-  if(x.amount == max){
-    document.getElementById(x.day).style.backgroundColor = "var(--cyan)"
-  }
+window.addEventListener('DOMContentLoaded', () => {
+  data.forEach( x => {
+    document.getElementById(x.day).style.height = (x.amount / max) * 100 + "%"
+    document.getElementById(x.day).setAttribute('amount', '$'+x.amount)
+  
+    if(x.amount == max){
+      document.getElementById(x.day).style.backgroundColor = "var(--cyan)"
+    }
+  })
 })

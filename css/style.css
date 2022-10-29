@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,700;1,400&display=swap');
+:root {
+  --orange : hsl(10, 79%, 65%);
+  --cream : hsl(27, 66%, 92%);
+  --cyan: hsl(186, 34%, 60%);
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --very-pale-orange: hsl(33, 100%, 98%);
+  --border-radius: 20px;
+  --border-radius-chart: 5px;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fraunces', serif;
+  position: relative
+}
+
+body{
+  background-color: var(--cream);
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-container{
+  width: 540px;
+}
+
+.chart-head{
+  background-color: var(--orange);
+  border-radius: var(--border-radius);
+  margin-bottom: 15px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+.chart-head p {
+  margin-bottom: 10px;
+  color: var(--very-pale-orange);
+  font-weight: var(--font-weight-regular);
+  font-size: 18px;
+}
+.chart-head div {
+  color: var(--very-pale-orange);
+  font-weight: var(--font-weight-regular);
+  font-size: 30px;
+}
+
+.chart-body {
+  background-color: var(--very-pale-orange);
+  border-radius: var(--border-radius);
+  height: 510px;
+  padding: 40px;
+}
+
+.title{
+  font-size: 30px;
+  font-weight: var(--font-weight-regular);
+  margin-bottom: 70px;
+}
+
+.chart{
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.day{
+  height: 100%;
+  width: 50px;
+  background-color: var(--orange);
+  border-radius: var(--border-radius-chart);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  transition: all 1s;
+}
+
+.day:after{
+  content: attr(id);
+  color: var(--medium-brown);
+  position: absolute;
+  bottom: -25px;
+}
+
+.seperator {
+  background-color: var(--medium-brown);
+  height: 1px;
+  margin-bottom: 40px;
+}
+
+.chart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.month-container p {
+  color: var(--medium-brown);
+  font-size: 18px;
+}
+
+.month-container div {
+  font-size: 30px;
+  font-weight: var(--font-weight-bold);
+}
+
+.from-last-month {
+  text-align: right;
+}
+.from-last-month p{
+  color: var(--medium-brown);
+}
